@@ -14,6 +14,9 @@ class Character {
 
 let healthBar = document.querySelector("#health");
 
+let baseSpeed = 0.05;
+let turboSpeed = 0.3;
+
 const player = new Character(30, 30, "blue", 10, 0.05);
 const enemies = [
   new Character(300, 0, "rgb(200,190,80)", 15, 0.01),
@@ -79,6 +82,13 @@ function mouseClicked() {
   if (!scarecrow) {
     scarecrow = new Character(player.x, player.y, "white", 10, 0);
     scarecrow.ttl = frameRate() * 5;
+  }
+}
+
+function keyPressed() {
+  if (key === " ") {
+    player.speed = turboSpeed;
+    setTimeout(() => {player.speed = baseSpeed;}, 5000);
   }
 }
 
