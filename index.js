@@ -27,7 +27,7 @@ const enemies = [
 let scarecrow;
 
 function setup()  {
-  createCanvas(400, 400);
+  createCanvas(800, 600);
   noStroke();
 }
 
