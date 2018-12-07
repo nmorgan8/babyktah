@@ -12,6 +12,8 @@ class Character {
   }
 }
 
+let healthBar = document.querySelector("#health");
+
 const player = new Character(30, 30, "blue", 10, 0.05);
 const enemies = [
   new Character(300, 0, "rgb(200,190,80)", 15, 0.01),
@@ -40,6 +42,11 @@ function draw() {
     }
   }
   adjust();
+  if (healthBar.value <= 0) {
+    // TODO: Message game over
+    noLoop();
+    gameOver();
+  }
 }
 
 function adjust() {
@@ -56,6 +63,9 @@ function pushOff(c1, c2) {
   const distance = Math.hypot(dx, dy);
   let overlap = c1.radius + c2.radius - distance;
   if (overlap > 0) {
+    if (c1 === player) {
+      healthBar.value -= 1;
+    }
     const adjustX = (overlap / 2) * (dx / distance);
     const adjustY = (overlap / 2) * (dy / distance);
     c1.x -= adjustX;
@@ -70,4 +80,12 @@ function mouseClicked() {
     scarecrow = new Character(player.x, player.y, "white", 10, 0);
     scarecrow.ttl = frameRate() * 5;
   }
+}
+
+function gameOver() {
+  textAlign(CENTER);
+  textFont('Creepster');
+  textSize(65);
+  fill("red")
+  text("GAME OVER", width/2, height/2);
 }
