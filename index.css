@@ -10,13 +10,6 @@ h2{
 	float: bottom;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 #div01{
   height: 25px;
 	width: 500px;
@@ -32,6 +25,7 @@ body {
   background-color: grey;
   border: none;
   border-radius: 10px;
+  text-decoration: none;
   box-shadow: 0 9px #999;
   display: inline;
 }
