@@ -37,11 +37,11 @@ body {
 }
 
 #D1:hover{
-	background-color: #00ffcc;
+	background-color: #ff0000;
 }
 
 #D1:active{
-  background-color: #00b38f;
+  background-color: #b30000;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
