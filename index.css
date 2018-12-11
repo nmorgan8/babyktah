@@ -10,6 +10,13 @@ h2{
 	float: bottom;
 }
 
+h3{
+  color: purple;
+  font-weight: bold;
+  font-family: Creepster;
+  float: bottom;
+}
+
 #div01{
   height: 25px;
 	width: 500px;
