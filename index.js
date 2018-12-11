@@ -16,6 +16,8 @@ let healthBar = document.querySelector("#health");
 
 let baseSpeed = 0.05;
 let turboSpeed = 0.3;
+let shrinkRadius = 5;
+let sendTop = 0;
 
 const player = new Character(30, 30, "blue", 10, 0.05);
 const enemies = [
@@ -89,6 +91,14 @@ function keyPressed() {
   if (key === " ") {
     player.speed = turboSpeed;
     setTimeout(() => {player.speed = baseSpeed;}, 5000);
+  }
+  if (key === "z" || key === "Z") {
+    enemies.radius = shrinkRadius;
+    setTimeout(() => {enemies.radius = 18;}, 4500);
+  }
+  if (key === "x" || key === "X") {
+    enemies.x = sendTop;
+    setTimeout(() => {enemies.x = 0;}, 5000);
   }
 }
 
