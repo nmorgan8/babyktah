@@ -2,3 +2,32 @@ h1{
   font-family: Creepster, sans-serif;
   font-weight: bold;
   }
+
+  #div01{
+  	height: 25px;
+  	width: 500px;
+  	opacity: 20%;
+  }
+
+  #D1{padding: 10px 20px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: grey;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 9px #999;
+    display: inline;
+  }
+
+  #D1:hover{
+  	background-color: #00ffcc;
+  }
+  
+  #D1:active{
+  	 background-color: #00b38f;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
