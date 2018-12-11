@@ -3,6 +3,13 @@ h1{
   font-weight: bold;
   }
 
+h2{
+  color: red;
+	font-weight: bold;
+	font-family: Creepster;
+	float: bottom;
+}
+
 #div01{
   height: 25px;
 	width: 500px;
