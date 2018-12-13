@@ -4,6 +4,10 @@
 
 .header {
   background-color: #f1f1f1;
+  font-family: Creepster, sans-serif;
+  font-weight: bold;
+  color: black;
+  float: bottom;
   padding: 30px;
   text-align: center;
   font-size: 35px;
@@ -22,6 +26,7 @@
    -webkit-flex: 1;
    -ms-flex: 1;
    flex: 1;
+   font-family: sans-serif;
 }
 
 .column.middle {
@@ -43,25 +48,8 @@
     flex-direction: column;
 }
 
-h1{
-  font-family: Creepster, sans-serif;
-  font-weight: bold;
-  color: black;
-  float: bottom;
-}
-
 p{
-  font-family: sans-serif;
-}
-
-li{
-  font-family: sans-serif;
-}
-
-#space{
-  font-style: italic;
-}
-
+  font-family: Avenir;
 }
 
 #c1{
