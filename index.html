@@ -5,28 +5,33 @@
     <meta charset="utf-8">
     <title>Baby K'Tah</title>
     <link rel="stylesheet" href="index.css">
-
-    <h1>Baby K'Tah</h1>
-    <div id="game"></div>
-    <p><progress id="health" max=100 value=100></progress>Health Bar</p>
-    <footer>...</footer>
-
-    <h2>Options:</h2>
-    <div id="div01">
-    <a href="index.html"><div id="D1">Restart</div></a>
-
-    <h3>Abilities</h3>
-    <ul>
-    <li id="space">Space: Player Speed Boost - 5 sec duration</li>
-    <li id="z">Z: Player Size Decrease - 4.5 sec duration</li>
-    <li id=""></li>
-    </ul>
-
   </head>
   <body>
-    <div id= "js-holder"></div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
-    <script src="index.js"></script>
+    <div class="header">
+      <h1>Baby K'Tah</h1>
+      <p><progress id="health" max=100 value=100></progress>Health Bar</p>
+    </div>
+    <div class="row">
+      <div class="column side" style="background-color:#aaa;">
+        <h2>Options:</h2>
+        <a href="index.html"><button class="button btn1">Restart</button></a>
+      </div>
+      <div class="column middle" style="background-color:#bbb;">
+        <div id= "js-holder">
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+          <script src="index.js"></script>
+        </div>
+      </div>
+      <div class="column side" style="background-color:#ccc;"><h2>Abilities</h2>
+        <ul>
+          <li id="space">Space: Player Speed Boost - 5 sec duration</li>
+          <li id="z">Z: Player Size Decrease - 4.5 sec duration</li>
+          <li id=""></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer">
+      <p>A project by Christian Blair and Nick Morgan</p>
+    </div>
   </body>
 </html>
