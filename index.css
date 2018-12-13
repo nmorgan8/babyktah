@@ -26,7 +26,7 @@
    -webkit-flex: 1;
    -ms-flex: 1;
    flex: 1;
-   font-family: sans-serif;
+   font-family: Avenir;
 }
 
 .column.middle {
@@ -53,14 +53,12 @@ p{
 }
 
 #c1{
-  font-family: Creepster;
 	font-weight: bold;
   color: #ff4d4d;
 	float: bottom;
 }
 
 #c3{
-  font-family: Creepster;
   font-weight: bold;
   color: #c61aff;
   float: bottom;
