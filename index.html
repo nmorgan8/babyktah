@@ -1,38 +1,42 @@
 <!doctype html>
 <html>
 <link href="https://fonts.googleapis.com/css?family=Creepster" rel="stylesheet">
-  <head>
-    <meta charset="utf-8">
-    <title>Baby K'Tah</title>
-    <link rel="stylesheet" href="index.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <div class="header">
-      <h1>Baby K'Tah</h1>
-      <p><progress id="health" max=100 value=100></progress>Health Bar</p>
+
+<head>
+  <meta charset="utf-8">
+  <title>Baby K'Tah</title>
+  <link rel="stylesheet" href="index.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="header">
+    <h1>Baby K'Tah</h1>
+    <p><progress id="health" max=100 value=100></progress>Health Bar</p>
+  </div>
+  <div class="row">
+    <div class="column side" style="background-color:#f2f2f2;">
+      <h2 id="c1">Options:</h2>
+      <a href="index.html"><button class="button btn1">Restart</button></a>
     </div>
-    <div class="row">
-      <div class="column side" style="background-color:#f2f2f2;">
-        <h2 id="c1">Options:</h2>
-        <a href="index.html"><button class="button btn1">Restart</button></a>
-      </div>
-      <div class="column middle" style="background-color:#e6e6e6;">
-        <div id= "js-holder">
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
-          <script src="index.js"></script>
-        </div>
-      </div>
-      <div class="column side" style="background-color:#f2f2f2;"><h2 id="c3">Abilities:</h2>
-        <ul>
-          <li id="space">Space: Player Speed Boost - 5 sec duration</li>
-          <li id="z">Z: Player Size Decrease - 4.5 sec duration</li>
-          <li id=""></li>
-        </ul>
+    <div class="column middle" style="background-color:#e6e6e6;">
+      <div id="js-holder">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+        <script src="index.js"></script>
       </div>
     </div>
-    <div class="footer">
-      <p>A project by Christian Blair and Nick Morgan</p>
+    <div class="column side" style="background-color:#f2f2f2;">
+      <h2 id="c3">Abilities:</h2>
+      <ul>
+        <li id="space">Space: Player Speed Boost - 5 sec duration</li>
+        <li id="z">Z: Player Size Decrease - 3 sec duration</li>
+        <li id=""></li>
+      </ul>
     </div>
-  </body>
+  </div>
+  <div class="footer">
+    <p>A project by Christian Blair and Nick Morgan</p>
+  </div>
+</body>
+
 </html>

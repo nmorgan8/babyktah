@@ -23,21 +23,21 @@ const enemies = [
   new Character(300, 0, "rgb(200,190,80)", 15, 0.01),
   new Character(300, 300, "rgb(240,100,250)", 17, 0.03),
   new Character(0, 300, "rgb(80,200,235)", 20, 0.003),
-  new Character(20, 400, "rgb(100,170,190)", 12, 0.02),
+  new Character(20, 400, "rgb(100,170,190)", 12, 0.02)
 ];
 let scarecrow;
 
-
-function setup()  {
+function setup() {
   let canvas = createCanvas(800, 600);
-  canvas.parent('js-holder');
+  canvas.parent("js-holder");
   noStroke();
+  start();
 }
 
 function draw() {
   background("lightgreen");
   player.draw();
-  player.move({x: mouseX, y: mouseY});
+  player.move({ x: mouseX, y: mouseY });
   enemies.forEach(enemy => enemy.draw());
   enemies.forEach(enemy => enemy.move(scarecrow || player));
   if (scarecrow) {
@@ -53,12 +53,13 @@ function draw() {
     noLoop();
     gameOver();
   }
+  end();
 }
 
 function adjust() {
   const characters = [player, ...enemies];
   for (let i = 0; i < characters.length; i++) {
-    for (let j = i+1; j < characters.length; j++) {
+    for (let j = i + 1; j < characters.length; j++) {
       pushOff(characters[i], characters[j]);
     }
   }
@@ -72,8 +73,8 @@ function pushOff(c1, c2) {
     if (c1 === player) {
       healthBar.value -= 1;
     }
-    const adjustX = (overlap / 2) * (dx / distance);
-    const adjustY = (overlap / 2) * (dy / distance);
+    const adjustX = overlap / 2 * (dx / distance);
+    const adjustY = overlap / 2 * (dy / distance);
     c1.x -= adjustX;
     c1.y -= adjustY;
     c2.x += adjustX;
@@ -91,18 +92,41 @@ function mouseClicked() {
 function keyPressed() {
   if (key === " ") {
     player.speed = turboSpeed;
-    setTimeout(() => {player.speed = baseSpeed;}, 5000);
+    setTimeout(() => {
+      player.speed = baseSpeed;
+    }, 5000);
   }
   if (key === "z" || key === "Z") {
     player.radius = shrinkRadius;
-    setTimeout(() => {player.radius = 15;}, 4500);
+    setTimeout(() => {
+      player.radius = 15;
+    }, 3000);
   }
 }
 
+let startTime, endTime;
+
+function start() {
+  startTime = new Date();
+}
+
+function end() {
+  endTime = new Date();
+  var timeDiff = endTime - startTime; //in ms
+  // strip the ms
+  timeDiff /= 1000;
+
+  // get seconds
+  let seconds = Math.round(timeDiff);
+  console.log(count + " seconds");
+}
+
+console.log(count);
+
 function gameOver() {
   textAlign(CENTER);
-  textFont('Creepster');
+  textFont("Creepster");
   textSize(65);
-  fill("red")
-  text("GAME OVER", width/2, height/2);
+  fill("red");
+  text("GAME OVER", width / 2, height / 2);
 }
