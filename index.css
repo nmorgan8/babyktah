@@ -4,7 +4,11 @@
 }
 
 .column.side {
-  width: 15%;
+  flex-grow: 1;
+}
+
+.column.middle {
+  flex-grow: 2;
 }
 
 .row:after {
