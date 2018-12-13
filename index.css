@@ -1,48 +1,75 @@
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.column.side {
+  width: 25%;
+}
+
+.column.middle {
+  width: 50%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
 h1{
   font-family: Creepster, sans-serif;
   font-weight: bold;
+  color: black;
+  float: bottom;
   }
 
 h2{
-  color: red;
+  font-family: Creepster;
 	font-weight: bold;
-	font-family: Creepster;
+  color: #ff4d4d;
 	float: bottom;
 }
 
 h3{
-  color: purple;
-  font-weight: bold;
   font-family: Creepster;
+  font-weight: bold;
+  color: #c61aff;
   float: bottom;
 }
 
-#div01{
-  height: 25px;
-	width: 500px;
-	opacity: 20%;
+progress {
+  background-color: #66ff66;
+  border: 0;
+  height: 18px;
+  border-radius: 9px;
 }
 
-#D1{padding: 10px 20px;
-  font-size: 20px;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  color: #fff;
-  background-color: grey;
+.button{
+  background-color: #ff4d4d;
   border: none;
-  border-radius: 10px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 14px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
   text-decoration: none;
-  box-shadow: 0 9px #999;
-  display: inline;
+  cursor: pointer;
 }
 
-#D1:hover{
-	background-color: #ff0000;
+.btn1:hover{
+	opacity: 1;
 }
 
-#D1:active{
-  background-color: #b30000;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+.btn1:active{
+  background-color: #ff3333;
 }
