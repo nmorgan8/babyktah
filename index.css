@@ -4,11 +4,11 @@
 }
 
 .column.side {
-  width: 25%;
+  width: 15%;
 }
 
 .column.middle {
-  width: 50%;
+  width: 70%;
 }
 
 .row:after {
@@ -18,6 +18,7 @@
 }
 
 .footer {
+  font-family: Avenir;
   background-color: #f1f1f1;
   padding: 5px;
   text-align: center;
@@ -30,21 +31,21 @@ h1{
   float: bottom;
   }
 
-h2{
+#c2{
   font-family: Creepster;
 	font-weight: bold;
   color: #ff4d4d;
 	float: bottom;
 }
 
-h3{
+#c3{
   font-family: Creepster;
   font-weight: bold;
   color: #c61aff;
   float: bottom;
 }
 
-progress::-webkit-progress-bar{
+progress::-webkit-progress-value{
   background-color: #66ff66;
   border: 0;
   height: 18px;
