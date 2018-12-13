@@ -7,10 +7,6 @@
   width: 15%;
 }
 
-.column.middle {
-  width: 70%;
-}
-
 .row:after {
   content: "";
   display: table;
