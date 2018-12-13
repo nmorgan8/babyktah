@@ -29,7 +29,21 @@ h1{
   font-weight: bold;
   color: black;
   float: bottom;
-  }
+}
+
+p{
+  font-family: sans-serif;
+}
+
+li{
+  font-family: sans-serif;
+}
+
+#space{
+  font-style: italic;
+}
+
+}
 
 #c1{
   font-family: Creepster;
