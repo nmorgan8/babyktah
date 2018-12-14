@@ -4,6 +4,8 @@ class Character {
   }
   draw() {
     fill(this.color);
+    this.x = constrain(this.x, 0, width);
+    this.y = constrain(this.y, 0, height);
     ellipse(this.x, this.y, this.radius * 2);
   }
   move(target) {
