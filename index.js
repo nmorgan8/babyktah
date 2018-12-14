@@ -60,7 +60,7 @@ function draw() {
 const spawnEnemy = setInterval(newEnemy, 3000)
 
 function newEnemy(){
-  enemies.push(new Character(width/2, height/2, "rgb(50, 125, 200", Math.floor(Math.random() * 15 + 10), Math.random() * 0.025 + 0.01));
+  enemies.push(new Character(width/2, height/2, getRandomRgb(), Math.floor(Math.random() * 15 + 10), Math.random() * 0.025 + 0.01));
 }
 
 function adjust() {
@@ -90,9 +90,11 @@ function pushOff(c1, c2) {
 }
 
 function mouseClicked() {
-  if (!scarecrow) {
-    scarecrow = new Character(player.x, player.y, "white", 10, 0);
-    scarecrow.ttl = frameRate() * 5;
+  for(let i=0; i < 5; i++){
+    if (!scarecrow) {
+      scarecrow = new Character(player.x, player.y, "white", 10, 0);
+      scarecrow.ttl = frameRate() * 5;
+    }
   }
 }
 
@@ -121,6 +123,14 @@ function countScore() {
 
 function showScore(){
     scoreCounter.textContent = score;
+}
+
+function getRandomRgb() {
+  let num = Math.round(0xffffff * Math.random());
+  let r = num >> 16;
+  let g = num >> 8 & 255;
+  let b = num & 255;
+  return 'rgb(' + r + ', ' + g + ', ' + b + ')';
 }
 
 function gameOver() {
