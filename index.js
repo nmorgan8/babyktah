@@ -90,11 +90,9 @@ function pushOff(c1, c2) {
 }
 
 function mouseClicked() {
-  for(i=0; i <5; i++){
-    if (!scarecrow) {
-      scarecrow = new Character(player.x, player.y, "white", 10, 0);
-      scarecrow.ttl = frameRate() * 5;
-    }
+  if (!scarecrow) {
+    scarecrow = new Character(player.x, player.y, "white", 10, 0);
+    scarecrow.ttl = frameRate() * 5;
   }
 }
 
