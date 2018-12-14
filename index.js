@@ -50,10 +50,10 @@ function draw() {
   adjust();
   if (healthBar.value <= 0) {
     // TODO: Message game over
+    end();
     noLoop();
     gameOver();
   }
-  end();
 }
 
 function adjust() {
@@ -112,7 +112,7 @@ function start() {
 
 function end() {
   endTime = new Date();
-  var timeDiff = endTime - startTime; //in ms
+  let timeDiff = endTime - startTime; //in ms
   // strip the ms
   timeDiff /= 1000;
 
