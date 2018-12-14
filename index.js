@@ -57,6 +57,12 @@ function draw() {
   }
 }
 
+const spawnEnemy = setInterval(newEnemy, 3000)
+
+function newEnemy(){
+  enemies.push(new Character(width/2, height/2, "rgb(50, 125, 200", Math.floor(Math.random() * 15 + 10), Math.random() * 0.025 + 0.01));
+}
+
 function adjust() {
   const characters = [player, ...enemies];
   for (let i = 0; i < characters.length; i++) {
