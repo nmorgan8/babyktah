@@ -31,7 +31,6 @@ function setup() {
   let canvas = createCanvas(800, 600);
   canvas.parent("js-holder");
   noStroke();
-  start();
 }
 
 function draw() {
@@ -40,6 +39,7 @@ function draw() {
   player.move({ x: mouseX, y: mouseY });
   enemies.forEach(enemy => enemy.draw());
   enemies.forEach(enemy => enemy.move(scarecrow || player));
+  showScore();
   if (scarecrow) {
     scarecrow.draw();
     scarecrow.ttl--;
@@ -50,7 +50,6 @@ function draw() {
   adjust();
   if (healthBar.value <= 0) {
     // TODO: Message game over
-    end();
     noLoop();
     gameOver();
   }
@@ -104,24 +103,17 @@ function keyPressed() {
   }
 }
 
-let startTime, endTime;
+const scoreCounter = document.getElementById('seconds-counter');
+let score = 0;
+const setScoreIncrement = setInterval(countScore, 1000);
 
-function start() {
-  startTime = new Date();
+function countScore() {
+  score += 1;
 }
 
-function end() {
-  endTime = new Date();
-  let timeDiff = endTime - startTime; //in ms
-  // strip the ms
-  timeDiff /= 1000;
-
-  // get seconds
-  let seconds = Math.round(timeDiff);
-  console.log(count + " seconds");
+function showScore(){
+    scoreCounter.textContent = score;
 }
-
-console.log(count);
 
 function gameOver() {
   textAlign(CENTER);
